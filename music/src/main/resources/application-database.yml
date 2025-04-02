@@ -1,0 +1,55 @@
+# Flyway Configuration
+spring:
+  flyway:
+    enabled: ${FLYWAY:false}
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    clean-disabled: true
+    validate-on-migrate: true
+    baseline-version: 0
+    user: ${FLYWAY_USER:admin}
+    password: ${FLYWAY_PASSWORD:testingflyway}
+
+# Datasource Configuration
+  datasource: 
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_DATABASE:example}?ssl=true&sslmode=require
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+# Hikari Connection Pool Configuration
+    hikari:
+      max-lifetime: ${DB_MAXLIFETIME:180000}
+      idle-timeout: ${DB_IDLE-TIMEOUT:300000}
+      minimum-idle: ${DB_IDLE:5}
+      maximum-pool-size: ${DB_POOL:20}
+      connection-test-query: SELECT 1
+
+# JPA and Hibernate Configuration
+  jpa:
+    open-in-view: false
+    show-sql: false
+    hibernate: 
+      ddl-auto: ${DLL_AUTO:validate}
+    properties:
+      hibernate: 
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+# Redis Configuration
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT}
+      username: ${REDIS_USERNAME}
+      password: ${REDIS_PASSWORD}
+      timeout: ${REDIS_TIMEOUT:5000}
+      ssl:
+        enabled: ${REDIS_SSL:true}
+
+# Redis Lettuce Pool Configuration
+      lettuce:
+        pool:
+          max-active: ${REDIS_ACTIVE:8}
+          max-idle: ${REDIS_MAX:8}
+          min-idle: ${REDIS_MIN:0}
+          time-between-eviction-runs: 1s

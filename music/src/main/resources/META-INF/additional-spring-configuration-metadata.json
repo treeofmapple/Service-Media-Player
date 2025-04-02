@@ -1,0 +1,32 @@
+{"properties": [
+  {
+    "name": "amazon.s3.bucket-name",
+    "type": "java.lang.String",
+    "description": "A description for 'amazon.s3.bucket-name'"
+  },
+  {
+    "name": "amazon.s3.region.static",
+    "type": "java.lang.String",
+    "description": "A description for 'amazon.s3.region.static'"
+  },
+  {
+    "name": "amazon.s3.credentials.access-key",
+    "type": "java.lang.String",
+    "description": "A description for 'amazon.s3.credentials.access-key'"
+  },
+  {
+    "name": "amazon.s3.credentials.secret-key",
+    "type": "java.lang.String",
+    "description": "A description for 'amazon.s3.credentials.secret-key'"
+  },
+  {
+    "name": "blackblaze.endpoint",
+    "type": "java.lang.String",
+    "description": "A description for 'blackblaze.endpoint'"
+  },
+  {
+    "name": "amazon.s3.endpoint",
+    "type": "java.lang.String",
+    "description": "A description for 'amazon.s3.endpoint'"
+  }
+]}

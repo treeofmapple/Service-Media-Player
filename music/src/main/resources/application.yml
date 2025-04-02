@@ -1,0 +1,8 @@
+server:
+  port: ${MUSIC_PORT:8888}
+
+spring:
+  profiles: 
+    active: debug, log, test, s3
+  application: 
+    name: music-service

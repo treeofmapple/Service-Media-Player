@@ -1,0 +1,11 @@
+amazon:
+  s3:
+    bucket-name: ${BUCKET_NAME}
+    region:
+      static: ${BUCKET_REGION}
+    credentials: 
+      access-key: ${ACCESS_KEY}
+      secret-key: ${SECRET_KEY}
+
+blackblaze:
+  endpoint: ${END_POINT}
