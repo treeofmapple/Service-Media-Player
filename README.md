@@ -1,2 +1,1 @@
-# Java-Media-Player
- 
+# Service-Media-Player
